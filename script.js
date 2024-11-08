@@ -40,9 +40,9 @@ document.getElementById('generate-resume').addEventListener('click', function() 
     document.getElementById('rpreview').classList.remove('hidden');
 });
 
-// document.getElementById('download-resume').addEventListener('click', function() {
-//    const element = document.getElementById('rpreview');
-//    html2pdf()
-//        .from(element)
-//        .save(${document.getElementById('name').value}_Resume.pdf);
-// });
+document.getElementById('download-resume').addEventListener('click', function() {
+   const element = document.getElementById('rpreview');
+   html2pdf()
+       .from(element)
+       .save(`${document.getElementById('name').value}_Resume.pdf`);
+});
